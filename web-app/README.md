@@ -17,7 +17,7 @@
 
 ### 前置要求
 
-- Rust 1.70+
+- Rust 1.92+
 - Trunk (Yew 应用构建工具)
 - WebAssembly 目标
 
@@ -52,7 +52,7 @@ trunk serve
 
 ```bash
 cd web-app
-trunk build --release
+trunk build --release --public-url ./
 ```
 
 
