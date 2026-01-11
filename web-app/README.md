@@ -72,7 +72,9 @@ docker-compose up -d
 ```
 web-app/
 ├── src/
-│   ├── main.rs              # 应用入口和路由配置
+│   ├── main.rs              # 应用入口点
+│   ├── app.rs               # 应用根组件和页脚
+│   ├── router.rs            # 路由定义和配置
 │   ├── components/          # 可复用组件
 │   │   ├── mod.rs
 │   │   └── nav.rs           # 导航栏组件
@@ -87,6 +89,7 @@ web-app/
 │   ├── _base.scss           # 基础样式
 │   ├── _layout.scss         # 布局样式
 │   ├── _navbar.scss         # 导航栏样式
+│   ├── _footer.scss         # 页脚样式
 │   ├── _components.scss     # 组件样式
 │   ├── _home.scss           # 首页样式
 │   └── _about.scss          # 关于页面样式

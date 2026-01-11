@@ -1,0 +1,128 @@
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: $white;
+    margin-top: $spacing-xxl;
+    padding: $spacing-xl 0 $spacing-md;
+    
+    .footer-container {
+        max-width: $breakpoint-wide;
+        margin: 0 auto;
+        padding: 0 $spacing-lg;
+    }
+    
+    .footer-content {
+        @include grid-auto(220px, $spacing-xl);
+        margin-bottom: $spacing-lg;
+        
+        @include tablet {
+            grid-template-columns: 1fr;
+            gap: $spacing-lg;
+        }
+    }
+    
+    .footer-section {
+        h3 {
+            font-size: $font-lg;
+            margin-bottom: $spacing-sm;
+            color: $white;
+        }
+        
+        h4 {
+            font-size: $font-md;
+            margin-bottom: $spacing-sm;
+            color: rgba($white, 0.9);
+        }
+        
+        p {
+            color: rgba($white, 0.7);
+            font-size: $font-sm;
+            line-height: 1.6;
+        }
+    }
+    
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            margin-bottom: $spacing-xs;
+            
+            a {
+                color: rgba($white, 0.7);
+                text-decoration: none;
+                transition: color $transition-fast;
+                font-size: $font-sm;
+                
+                &:hover {
+                    color: $white;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid rgba($white, 0.1);
+        padding-top: $spacing-md;
+        text-align: center;
+        
+        p {
+            color: rgba($white, 0.6);
+            font-size: $font-xs;
+            margin: $spacing-xs 0;
+        }
+    }
+}
+
+// 404 页面样式
+.not-found-page {
+    min-height: 60vh;
+    @include flex-center;
+    text-align: center;
+    
+    .not-found-content {
+        max-width: 600px;
+        padding: $spacing-xl;
+    }
+    
+    .not-found-title {
+        font-size: 8rem;
+        font-weight: 900;
+        @include gradient-text;
+        margin-bottom: $spacing-sm;
+        line-height: 1;
+        
+        @include tablet {
+            font-size: 6rem;
+        }
+    }
+    
+    h2 {
+        color: $text-color;
+        margin-bottom: $spacing-sm;
+    }
+    
+    p {
+        color: $text-light;
+        font-size: $font-md;
+        margin-bottom: $spacing-lg;
+    }
+    
+    .not-found-actions {
+        display: flex;
+        gap: $spacing-sm;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+// 应用包装器
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    .container {
+        flex: 1;
+    }
+}

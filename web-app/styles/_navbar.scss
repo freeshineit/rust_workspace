@@ -22,6 +22,16 @@
 }
 
 .nav-brand {
+    a {
+        color: $white;
+        text-decoration: none;
+        transition: opacity $transition-fast;
+        
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    
     h2 {
         font-size: $font-lg;
         font-weight: 700;

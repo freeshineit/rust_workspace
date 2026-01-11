@@ -1,6 +1,4 @@
 .container {
-    max-width: $breakpoint-wide;
-    margin: 0 auto;
     padding: $spacing-lg;
     
     @include tablet {
