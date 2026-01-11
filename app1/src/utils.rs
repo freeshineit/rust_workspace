@@ -1,5 +1,5 @@
 /// 工具函数模块
-
+///
 /// 格式化字符串为标题格式
 pub fn format_title(text: &str) -> String {
     format!("=== {} ===", text.to_uppercase())
