@@ -1,0 +1,80 @@
+// 响应式断点
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+// Flexbox 居中
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// 卡片样式
+@mixin card($padding: $spacing-lg) {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: $padding;
+    box-shadow: $shadow-md;
+}
+
+// 渐变文字
+@mixin gradient-text {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// 悬停效果
+@mixin hover-lift {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-lg;
+    }
+}
+
+// 按钮基础样式
+@mixin button-base {
+    padding: $spacing-xs $spacing-lg;
+    font-size: $font-sm;
+    font-weight: 600;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: all $transition-normal;
+    
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// 网格布局
+@mixin grid-auto($min-width: 250px, $gap: $spacing-lg) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    gap: $gap;
+}

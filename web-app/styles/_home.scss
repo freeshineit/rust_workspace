@@ -1,0 +1,162 @@
+.home-page {
+    // Hero 区域
+    .hero {
+        text-align: center;
+        padding: $spacing-xl 0;
+        border-bottom: 2px solid $border-color;
+        position: relative;
+        overflow: hidden;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba($primary-color, 0.05) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        h1 {
+            @include gradient-text;
+            margin-bottom: $spacing-sm;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: $font-md;
+            color: $text-light;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-buttons {
+            margin-top: $spacing-lg;
+            display: flex;
+            gap: $spacing-sm;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    
+    // 特性卡片
+    .features {
+        @include grid-auto(250px, $spacing-lg);
+        margin: $spacing-xl 0;
+    }
+    
+    .feature-card {
+        padding: $spacing-lg;
+        background: $gradient-light;
+        border-radius: $radius-lg;
+        text-align: center;
+        transition: all $transition-normal;
+        border: 2px solid transparent;
+        
+        &:hover {
+            transform: translateY(-10px);
+            border-color: $primary-color;
+            box-shadow: $shadow-lg;
+        }
+        
+        h3 {
+            font-size: $font-lg;
+            margin-bottom: $spacing-sm;
+            color: $primary-color;
+        }
+        
+        p {
+            color: $text-light;
+            margin: 0;
+        }
+    }
+    
+    // 计数器演示
+    .counter-demo {
+        text-align: center;
+        padding: $spacing-xl 0;
+        border-top: 2px solid $border-color;
+        
+        h2 {
+            margin-bottom: $spacing-lg;
+            color: $primary-color;
+        }
+        
+        .counter-display {
+            margin: $spacing-lg 0;
+            padding: $spacing-xl;
+            background: $gradient-light;
+            border-radius: $radius-xl;
+            position: relative;
+            overflow: hidden;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $gradient-primary;
+                opacity: 0.1;
+                animation: shimmer 3s infinite;
+            }
+        }
+        
+        .counter-value {
+            font-size: $font-xxxl;
+            font-weight: 700;
+            @include gradient-text;
+            position: relative;
+            z-index: 1;
+            
+            @include tablet {
+                font-size: $font-xxl;
+            }
+        }
+        
+        .counter-buttons {
+            display: flex;
+            gap: $spacing-sm;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+    
+    // 统计数据
+    .stats {
+        @include grid-auto(200px, $spacing-md);
+        margin: $spacing-xl 0;
+        padding: $spacing-lg;
+        background: $gradient-light;
+        border-radius: $radius-lg;
+        
+        .stat-item {
+            text-align: center;
+            
+            .stat-number {
+                font-size: $font-xl;
+                font-weight: 700;
+                color: $primary-color;
+                display: block;
+            }
+            
+            .stat-label {
+                color: $text-light;
+                font-size: $font-sm;
+            }
+        }
+    }
+}

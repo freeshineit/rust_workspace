@@ -1,0 +1,82 @@
+.navbar {
+    background: $gradient-primary;
+    color: $white;
+    padding: $spacing-sm 0;
+    box-shadow: $shadow-md;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: $breakpoint-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    @include flex-between;
+    
+    @include tablet {
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+}
+
+.nav-brand {
+    h2 {
+        font-size: $font-lg;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        
+        @include tablet {
+            font-size: $font-md;
+        }
+    }
+}
+
+.nav-menu {
+    display: flex;
+    gap: $spacing-lg;
+    
+    @include tablet {
+        gap: $spacing-sm;
+    }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    transition: all $transition-normal;
+    display: block;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: $white;
+        transition: all $transition-normal;
+        transform: translateX(-50%);
+    }
+    
+    &:hover {
+        background: rgba($white, 0.2);
+        
+        &::after {
+            width: 80%;
+        }
+    }
+    
+    &.active {
+        background: rgba($white, 0.3);
+    }
+}

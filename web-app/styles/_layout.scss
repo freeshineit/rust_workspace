@@ -1,0 +1,64 @@
+.container {
+    max-width: $breakpoint-wide;
+    margin: 0 auto;
+    padding: $spacing-lg;
+    
+    @include tablet {
+        padding: $spacing-sm;
+    }
+}
+
+.page {
+    @include card;
+    animation: fadeIn $transition-slow;
+    min-height: calc(100vh - 200px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 网格布局
+.grid {
+    @include grid-auto;
+    
+    &.grid-2 {
+        @include grid-auto(400px);
+    }
+    
+    &.grid-3 {
+        @include grid-auto(300px);
+    }
+    
+    &.grid-4 {
+        @include grid-auto(250px);
+    }
+}
+
+// 间距工具类
+.mt-1 { margin-top: $spacing-sm; }
+.mt-2 { margin-top: $spacing-md; }
+.mt-3 { margin-top: $spacing-lg; }
+.mt-4 { margin-top: $spacing-xl; }
+
+.mb-1 { margin-bottom: $spacing-sm; }
+.mb-2 { margin-bottom: $spacing-md; }
+.mb-3 { margin-bottom: $spacing-lg; }
+.mb-4 { margin-bottom: $spacing-xl; }
+
+.p-1 { padding: $spacing-sm; }
+.p-2 { padding: $spacing-md; }
+.p-3 { padding: $spacing-lg; }
+.p-4 { padding: $spacing-xl; }
+
+// 文本对齐
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }

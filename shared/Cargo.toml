@@ -1,0 +1,11 @@
+[package]
+name = "shared"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[lib]
+name = "shared"
+path = "src/lib.rs"
+
+[dependencies]

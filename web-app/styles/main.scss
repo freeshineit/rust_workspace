@@ -1,0 +1,38 @@
+// 导入变量和混合
+@import 'variables';
+@import 'mixins';
+
+// 基础样式
+@import 'base';
+
+// 布局
+@import 'layout';
+
+// 组件
+@import 'navbar';
+@import 'components';
+
+// 页面
+@import 'home';
+@import 'about';
+
+// 响应式调整
+@include tablet {
+    .container {
+        padding: $spacing-sm;
+    }
+    
+    .page {
+        padding: $spacing-sm;
+    }
+}
+
+@include mobile {
+    .hero h1 {
+        font-size: $font-xl;
+    }
+    
+    .counter-value {
+        font-size: $font-xxl;
+    }
+}

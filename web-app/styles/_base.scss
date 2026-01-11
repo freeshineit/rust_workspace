@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+                 Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+    background: $bg-color;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: $font-xxl;
+    
+    @include tablet {
+        font-size: $font-xl;
+    }
+}
+
+h2 {
+    font-size: $font-xl;
+    
+    @include tablet {
+        font-size: $font-lg;
+    }
+}
+
+h3 {
+    font-size: $font-lg;
+}
+
+p {
+    margin-bottom: $spacing-sm;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color $transition-fast;
+    
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $gradient-primary;
+    border-radius: $radius-sm;
+    
+    &:hover {
+        background: $secondary-color;
+    }
+}
