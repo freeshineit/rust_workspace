@@ -5,7 +5,7 @@ pub fn about() -> Html {
     html! {
         <div class="page about-page">
             <h1>{ "关于我们" }</h1>
-            
+
             <div class="about-content">
                 <section class="about-section">
                     <h2>{ "📖 项目介绍" }</h2>
@@ -25,8 +25,8 @@ pub fn about() -> Html {
                     <h2>{ "🛠️ 技术栈" }</h2>
                     <ul class="tech-list">
                         <li>{ "🦀 Rust - 系统编程语言" }</li>
-                        <li>{ "🎨 Yew 0.21 - Rust 前端框架" }</li>
-                        <li>{ "🔀 Yew Router 0.18 - 路由管理" }</li>
+                        <li>{ "🎨 Yew 0.22 - Rust 前端框架" }</li>
+                        <li>{ "🔀 Yew Router 0.19 - 路由管理" }</li>
                         <li>{ "🌐 WebAssembly - 高性能 Web 运行时" }</li>
                         <li>{ "💅 Sass - CSS 预处理器" }</li>
                         <li>{ "📦 Trunk - 构建工具" }</li>

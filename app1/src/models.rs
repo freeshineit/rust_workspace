@@ -71,7 +71,12 @@ mod tests {
 
     #[test]
     fn test_user_creation() {
-        let user = User::new(1, "张三".to_string(), "zhangsan@example.com".to_string(), 25);
+        let user = User::new(
+            1,
+            "张三".to_string(),
+            "zhangsan@example.com".to_string(),
+            25,
+        );
         assert_eq!(user.id, 1);
         assert_eq!(user.name, "张三");
         assert!(user.is_adult());

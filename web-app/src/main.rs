@@ -1,10 +1,10 @@
-mod pages;
 mod components;
+mod pages;
 
+use components::Nav;
+use pages::{About, Home};
 use yew::prelude::*;
 use yew_router::prelude::*;
-use pages::{Home, About};
-use components::Nav;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {

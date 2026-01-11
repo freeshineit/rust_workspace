@@ -3,21 +3,21 @@ use yew::prelude::*;
 #[function_component(Home)]
 pub fn home() -> Html {
     let counter = use_state(|| 0);
-    
+
     let increment = {
         let counter = counter.clone();
         Callback::from(move |_| {
             counter.set(*counter + 1);
         })
     };
-    
+
     let decrement = {
         let counter = counter.clone();
         Callback::from(move |_| {
             counter.set(*counter - 1);
         })
     };
-    
+
     let reset = {
         let counter = counter.clone();
         Callback::from(move |_| {
@@ -83,11 +83,11 @@ pub fn home() -> Html {
             <div class="counter-demo">
                 <h2>{ "交互式计数器演示" }</h2>
                 <p class="subtitle">{ "体验 Yew 的响应式状态管理" }</p>
-                
+
                 <div class="counter-display">
                     <span class="counter-value">{ *counter }</span>
                 </div>
-                
+
                 <div class="counter-buttons">
                     <button onclick={decrement} class="btn btn-secondary btn-large">
                         { "➖ 减少" }
@@ -99,7 +99,7 @@ pub fn home() -> Html {
                         { "➕ 增加" }
                     </button>
                 </div>
-                
+
                 <div class="mt-3">
                     if *counter > 0 {
                         <span class="badge badge-success">{ "正数" }</span>

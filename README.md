@@ -32,6 +32,18 @@ cargo build --workspace
 
 # 运行测试
 cargo test --workspace
+
+# 格式化代码
+make fmt
+
+# 检查格式
+make fmt-check
+
+# 代码质量检查
+make lint
+
+# 完整检查
+make check
 ```
 
 ## 添加新的 bin 项目
